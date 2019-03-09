@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_light"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/chfText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:gravity="center_vertical"
+        android:text="CHF:"
+        android:textAlignment="center"
+        android:textColor="?android:attr/colorForeground"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tryText" />
+
+    <TextView
+        android:id="@+id/tryText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical"
+        android:text="TRY:"
+        android:textAlignment="center"
+        android:textColor="?android:attr/colorForeground"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/chfText"
+        app:layout_constraintEnd_toEndOf="@+id/chfText"
+        app:layout_constraintStart_toStartOf="@+id/chfText"
+        app:layout_constraintTop_toBottomOf="@+id/aedText" />
+
+    <TextView
+        android:id="@+id/aedText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="3dp"
+        android:gravity="center_vertical"
+        android:text="AED:"
+        android:textAlignment="center"
+        android:textColor="?android:attr/colorForeground"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tryText"
+        app:layout_constraintEnd_toEndOf="@+id/tryText"
+        app:layout_constraintStart_toStartOf="@+id/tryText"
+        app:layout_constraintTop_toBottomOf="@+id/usdText" />
+
+    <TextView
+        android:id="@+id/usdText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_vertical"
+        android:text="USD:"
+        android:textAlignment="center"
+        android:textColor="?android:attr/colorForeground"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/aedText"
+        app:layout_constraintEnd_toEndOf="@+id/aedText"
+        app:layout_constraintStart_toStartOf="@+id/aedText"
+        app:layout_constraintTop_toBottomOf="@+id/cadText" />
+
+    <TextView
+        android:id="@+id/cadText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="CAD:"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/usdText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:layout_marginEnd="38dp"
+        android:background="#1eecec"
+        android:onClick="getRates"
+        android:text=" GET RATES"
+        android:textColor="?android:attr/statusBarColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chfText" />
+</android.support.constraint.ConstraintLayout>
